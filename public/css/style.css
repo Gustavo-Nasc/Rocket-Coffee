@@ -1,0 +1,92 @@
+/*===== ROOT VARIABLES =====*/
+:root {
+    /* Base for HSL*/
+    --hue: 34;
+
+    /* Colors */
+    --bg-body-color: hsl(var(--hue), 100%, 92%);
+    --title-color: hsl(calc(var(--hue) - 3), 100%, 30%);
+    --section-title-bg-color: hsl(calc(var(--hue) - 2), 98%, 83%);
+
+    /* Fonts */
+    --primary-font: 'Roboto Serif', serif;
+    --secondary-font: 'Poppins', sans-serif;
+}
+
+
+/*===== RESET CSS =====*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*===== BASE =====*/
+header, main {
+    margin: auto;
+    max-width: 18.75rem;
+}
+
+/*===== STYLE PAGE =====*/
+
+/* Main Title */
+body {
+    background: var(--bg-body-color);
+}
+
+body header .container-title {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+body header .container-title .main-title {
+    font: 1.75rem var(--primary-font);
+    margin-bottom: 0.25rem;
+    text-transform: uppercase;
+}
+
+body header .container-title .main-title span {
+    color: var(--title-color);
+}
+
+body header .container-title .opening-hours {
+    font: 0.875rem var(--secondary-font);
+}
+
+/* Products Sections */
+body main {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+body main .section .section-title {
+    text-align: center;
+    text-transform: uppercase;
+    font: 1.125rem var(--primary-font);
+    padding: 0.5rem 0;
+    background: var(--section-title-bg-color);
+    margin-bottom: 1.5rem;
+}
+
+body main .section .products-container {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+body main .section .products-container .product div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+body main .section .products-container .product div .product-title,
+body main .section .products-container .product div .product-price {
+    font: 1rem var(--primary-font);
+    text-transform: uppercase;
+}
+
+body main .section .products-container .product .product-description {
+    font: 0.875rem var(--secondary-font);
+}

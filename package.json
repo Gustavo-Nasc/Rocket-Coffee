@@ -1,13 +1,13 @@
 {
   "name": "rocket-coffee",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Projeto referente à Projeto desenvolvido durante a Maratona Explorer 3.0, da Rocketseat",
   "author": "Gustavo Nascimento Souza <gustavo.ns@outlook.com.br | gunascsouza@gmail.com>",
-  "main": "src/server.ts",
+  "main": "src/server.js",
   "scripts": {
-    "start": "node dist/server",
-    "dev": "ts-node-dev .",
-    "build": "rimraf dist && tsc"
+    "start": "node .",
+    "dev": "nodemon .",
+    "init-db": "node src/database/init.js"
   },
   "keywords": [
     "Cafeteria",
@@ -20,12 +20,10 @@
   "dependencies": {
     "ejs": "^3.1.8",
     "express": "^4.18.1",
-    "express-async-errors": "^3.1.1"
+    "sqlite": "^4.1.2",
+    "sqlite3": "^5.0.11"
   },
   "devDependencies": {
-    "@types/express": "^4.17.13",
-    "rimraf": "^3.0.2",
-    "ts-node-dev": "^2.0.0",
-    "typescript": "^4.7.4"
+    "nodemon": "^2.0.19"
   }
 }
